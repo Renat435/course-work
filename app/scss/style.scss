@@ -134,11 +134,18 @@ ul{
     &__filtration-hidden-button {
         margin: 0 10px;
         width: 100%;
-        background: #00E0FF;
         border-radius: 8px;
         border: none;
         padding: 9px 0;
         cursor: pointer;
+        background: linear-gradient(45deg, #1CCBF1 50%, #FF640D 50%);
+        background-size: 300%;
+        background-position: 0%;
+        border-radius: 7px;
+        transition: background-position .5s ease-in-out;
+        &:hover {
+            background-position: 100%;
+        }
     }
     &__filtration-hidden-button-text {
         font-family: 'Roboto';
@@ -213,7 +220,7 @@ ul{
             line-height: 14px;
             color: #FFFFFF;
             cursor: pointer;
-            transition: background-position .5s;
+            transition: background-position .5s ease-in-out;
             &:hover{
                 background-position: 100%;
             }
